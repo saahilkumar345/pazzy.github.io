@@ -1,0 +1,43 @@
+.navbar {
+  box-shadow: 2px 2px 5px #3292a6;
+  opacity: 0.9;
+  background: #fff; }
+  .navbar .nav-item {
+    font-size: 1.4rem;
+    padding-right: 20px; }
+
+#home-section {
+  background: url("../img/home.jpg") no-repeat;
+  background-size: cover;
+  min-height: 300px; }
+  #home-section .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    min-height: 300px; }
+  #home-section #myInput {
+    color: #000; }
+
+#showcase {
+  background: url("../img/image1.jpg") no-repeat; }
+  #showcase .row {
+    background-color: rgba(0, 0, 0, 0.6); }
+  #showcase .carousel-item {
+    height: 300px; }
+
+#college-list .card {
+  height: 350px; }
+
+#college-list .card-img-top {
+  height: 200px; }
+
+footer#main-footer {
+  background: #000;
+  color: #fff; }
+
+#sign-up {
+  background: url("../img/login_back.jpg") no-repeat;
+  background-size: cover;
+  min-height: 750px; }
+  #sign-up .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    min-height: 750px; }

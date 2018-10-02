@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pazzy</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Sign Up -->
+  <section id="sign-up">
+    <div class="dark-overlay">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-md-6 mx-auto">
+            <div class="card">
+              <div class="card-header text-white bg-success">
+                <h4>User SignUp</h4>
+              </div>
+              <div class="card-body">
+                <form action="index.html">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email Address"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Enter your Email" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password"  required title="Enter Your Password" class="form-control">
+                  </div>
+
+                  <input type="submit" class="btn btn-success btn-block" value="SignUp">
+                  <div class="form-group mt-2">
+                    <p class="lead d-inline">Forget Your Password Then</p>
+                    <a href="#" class="btn btn-primary ml-4">Click Here</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src= "js/jquery.min.js"></script>
+  <script src= "js/popper.min.js"></script>
+  <script src= "js/bootstrap.min.js"></script>
+  <script>
+    $('.carousel').carousel({
+      interval:3000,
+      keyboard: true,
+      pause:'hover',
+      wrap:true
+    });
+  </script>
+</body>
+</html>

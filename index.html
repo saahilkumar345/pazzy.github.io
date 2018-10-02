@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pazzy</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #000;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #fff;
+  color: #000;
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light py-4">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/logo.jpg" alt="" width="100" height="100">
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="test.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#authors" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="login.html" class="nav-link btn btn-primary text-white">
+              Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link btn btn-success text-white">
+              Signup
+            </a>
+          </li>
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+
+  <!--Home Section-->
+  <header id="home-section">
+    <div class="dark-overlay">
+      <div class="home-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col mt-5">
+              <h1 class="display-4 text-center">Find hostels or PG's near your College</h1>
+              <div class="row mt-5">
+                <div class="col-md-6 m-auto">
+                  <form action="test.html">
+                    <div class="input-group p-auto">
+                      <input id="myInput" type="text" class="form-control" placeholder="Enter Your City">
+                      <span class="input-group-btn">
+                        <input type="submit" class="btn btn-primary">
+                      </span>
+                    </div>
+                  </form>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <!-- PHOTO GALLERY -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h1 class="text-center">Photo Gallery</h1>
+      <div class="row mb-4">
+        <div class="col-md-4 mb-4">
+          <a href="https://images.unsplash.com/photo-1515362655824-9a74989f318e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1ea8d1494f9311d9f9fad346fcbd6252&auto=format&fit=crop&w=1500&q=80" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://images.unsplash.com/photo-1515362655824-9a74989f318e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1ea8d1494f9311d9f9fad346fcbd6252&auto=format&fit=crop&w=1500&q=80" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="https://images.unsplash.com/photo-1528113196596-82172203a1df?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=992a77936015e8f28bf9f9a0c49d01ed&auto=format&fit=crop&w=1500&q=80" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://images.unsplash.com/photo-1528113196596-82172203a1df?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=992a77936015e8f28bf9f9a0c49d01ed&auto=format&fit=crop&w=1500&q=80" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="https://images.unsplash.com/photo-1527618798212-3bc916c4e9c0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fa66cac685cc5294a2470d3dee8ae6b7&auto=format&fit=crop&w=1500&q=80" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://images.unsplash.com/photo-1527618798212-3bc916c4e9c0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fa66cac685cc5294a2470d3dee8ae6b7&auto=format&fit=crop&w=1500&q=80" class="img-fluid">
+          </a>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-4 mb-4">
+          <a href="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b766d45a668d79b326ec73aa5a57e068&auto=format&fit=crop&w=1500&q=80" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b766d45a668d79b326ec73aa5a57e068&auto=format&fit=crop&w=1500&q=80" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="https://images.unsplash.com/photo-1474926136673-20f4d627b833?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9207453f561de5a10bb6ef0bc9963ec8&auto=format&fit=crop&w=1500&q=80" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://images.unsplash.com/photo-1474926136673-20f4d627b833?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9207453f561de5a10bb6ef0bc9963ec8&auto=format&fit=crop&w=1500&q=80" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="https://images.unsplash.com/photo-1422433555807-2559a27433bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c7659432e5dcc899791b9f342ff9d4e&auto=format&fit=crop&w=750&q=80" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://images.unsplash.com/photo-1422433555807-2559a27433bd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c7659432e5dcc899791b9f342ff9d4e&auto=format&fit=crop&w=750&q=80" class="img-fluid">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SECTION -->
+  <section id="newsletter" class="text-center p-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Signup For Our Newsletter</h1>
+          <form class="form-inline justify-content-center mt-5">
+            <label class="sr-only" for="name">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Enter Name">
+
+            <label class="sr-only" for="email">Email</label>
+            <input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Enter Email">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="main-footer" class="text-center p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Copyright 2017 &copy; Pazzy</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src= "js/jquery.min.js"></script>
+  <script src= "js/popper.min.js"></script>
+  <script src= "js/bootstrap.min.js"></script>
+  <script>
+    $('.carousel').carousel({
+      interval:3000,
+      keyboard: true,
+      pause:'hover',
+      wrap:true
+    });
+  </script>
+  <script>
+  function autocomplete(inp, arr) {
+    /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function(e) {
+        var a, b, i, val = this.value;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) { return false;}
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+          /*check if the item starts with the same letters as the text field value:*/
+          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            /*create a DIV element for each matching element:*/
+            b = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            b.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                (or any other open lists of autocompleted values:*/
+                closeAllLists();
+            });
+            a.appendChild(b);
+          }
+        }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function(e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+          increase the currentFocus variable:*/
+          currentFocus++;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 38) { //up
+          /*If the arrow UP key is pressed,
+          decrease the currentFocus variable:*/
+          currentFocus--;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 13) {
+          /*If the ENTER key is pressed, prevent the form from being submitted,*/
+          e.preventDefault();
+          if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+          }
+        }
+    });
+    function addActive(x) {
+      /*a function to classify an item as "active":*/
+      if (!x) return false;
+      /*start by removing the "active" class on all items:*/
+      removeActive(x);
+      if (currentFocus >= x.length) currentFocus = 0;
+      if (currentFocus < 0) currentFocus = (x.length - 1);
+      /*add class "autocomplete-active":*/
+      x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+      /*a function to remove the "active" class from all autocomplete items:*/
+      for (var i = 0; i < x.length; i++) {
+        x[i].classList.remove("autocomplete-active");
+      }
+    }
+    function closeAllLists(elmnt) {
+      /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+    /*execute a function when someone clicks in the document:*/
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+  }
+
+  /*An array containing all the country names in the world:*/
+  var countries = ["Hoshiarpur","Chandigarh","Mumbai","Delhi","Jalandhar","Amritsar","Ludhiana"];
+
+  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+  autocomplete(document.getElementById("myInput"), countries);
+  </script>
+</body>
+</html>
